@@ -1,0 +1,706 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*------------------Custom Styles---------*/
+
+/* Basic Setup & Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6; /* Improved line height for readability */
+    color: #333;
+    background-color: #f8f8f8; /* Light background */
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile menu */
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333; /* Consistent heading color */
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative; /* For underline effect */
+    padding-bottom: 10px;
+}
+
+/* Underline effect for section headings */
+h2::after {
+    content: '';
+    width: 80px; /* Underline width */
+    height: 4px;
+    background: #f44336; /* Your primary accent color */
+    display: block;
+    margin: 10px auto 0; /* Center the underline */
+    border-radius: 2px;
+}
+
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8; /* Improved line height */
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color by default */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    color: #f44336; /* Highlight links on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0; /* Ensure padding is removed by reset */
+}
+
+/* Header Section */
+.header {
+    min-height: 100vh; /* Full viewport height */
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/banner.png); /* Placeholder banner image */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    width: 90%; /* Use a percentage width */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the nav */
+    padding: 20px 0; /* Adjust padding */
+    z-index: 100; /* Ensure nav is above other content */
+}
+
+.logo-link {
+    display: block;
+}
+
+.logo {
+    width: 180px; /* Adjust logo size as needed */
+    display: block;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    display: inline-block;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 15px; /* Adjusted padding */
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px; /* Slightly increased font size */
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+/* Style for the icons within the navigation links */
+.nav-links ul li a i {
+    margin-right: 6px; /* Space between icon and text */
+    color: #fff; /* Icon color */
+    transition: color 0.3s ease; /* Transition for icon color */
+}
+
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336; /* Your primary accent color */
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li a:hover {
+    color: #f44336; /* Change text color on hover */
+}
+
+.nav-links ul li a:hover i {
+     color: #f44336; /* Change icon color on hover */
+}
+
+
+/* Hide only the menu toggle icons by default */
+nav .fa-bars,
+nav .fa-times {
+    display: none;
+}
+
+
+/* Text Box in Header */
+.text-box {
+    text-align: center;
+    color: #fff;
+    max-width: 900px; /* Limit max width */
+    padding: 0 20px;
+}
+
+.text-box h1 {
+    font-size: 55px; /* Adjusted font size */
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Added text shadow for better readability */
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 17px; /* Slightly increased font size */
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4); /* Added text shadow */
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 14px; /* Adjusted font size */
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease; /* Combined transition for multiple properties */
+    border-radius: 5px; /* Added rounded corners */
+}
+
+.hero-btn:hover {
+    border: 1px solid #f44336; /* Your primary accent color */
+    background: #f44336; /* Your primary accent color */
+    color: #fff; /* Ensure text color stays white on hover */
+    box-shadow: 0 0 15px rgba(244, 67, 54, 0.5); /* Added a subtle box shadow on hover */
+    transform: translateY(-3px); /* Added subtle lift */
+}
+
+
+/* General Section Styling */
+section {
+    padding: 80px 0; /* Increased padding for better separation */
+    text-align: center;
+    width: 90%; /* Use a percentage width */
+    margin: auto; /* Center the section */
+}
+
+section p {
+    color: #777;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px; /* Increased line height for readability */
+    padding: 0 10%; /* Added horizontal padding */
+    margin-bottom: 40px;
+}
+
+.row {
+    margin-top: 30px; /* Adjusted margin */
+    display: flex;
+    justify-content: center; /* Center columns */
+    flex-wrap: wrap;
+    gap: 30px; /* Increased gap between columns */
+    padding: 0 5%; /* Added horizontal padding to the row */
+}
+
+/* Column Styles */
+.about-col, .books-col, .library-col, .location-col {
+    flex-basis: calc(33.33% - 20px); /* Adjusted for gap */
+    background: #fff; /* Default white background */
+    border-radius: 10px;
+    padding: 25px; /* Adjusted padding */
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    transition: all 0.3s ease;
+    text-align: left; /* Align text left within columns */
+    border: 1px solid #eee; /* Subtle border */
+}
+
+.books-col {
+    background: #fff3f3; /* Light red background for books */
+}
+
+.about-col h3, .books-col h3, .library-col h3, .location-col h3 {
+    text-align: center; /* Center column headings */
+    font-weight: 600;
+    margin: 0 0 15px 0; /* Adjusted margin */
+    color: #333;
+}
+
+.about-col p, .books-col p, .library-col p, .location-col p {
+    padding: 0; /* Remove padding inherited from section p */
+    margin-bottom: 0; /* Remove bottom margin */
+    font-size: 15px; /* Adjusted font size */
+    line-height: 1.6; /* Adjusted line height */
+    color: #555;
+}
+
+.about-col:hover, .books-col:hover, .library-col:hover, .location-col:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* More pronounced shadow on hover */
+    transform: translateY(-5px); /* Lift on hover */
+}
+
+/* Library Highlights Images */
+.library-col img {
+    width: 100%;
+    border-radius: 8px; /* Slightly smaller border-radius for image */
+    margin-bottom: 15px;
+    display: block; /* Remove extra space below image */
+    height: 220px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Crop image to fit container */
+    transition: transform 0.5s ease;
+}
+
+.library-col:hover img {
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+/* About Us Specific Styles */
+.about-us ul {
+    list-style: disc; /* Add bullet points for values */
+    margin-left: 20px; /* Indent the list */
+    margin-top: 15px; /* Add space above the list */
+}
+
+.about-us ul li {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* FAQs Section */
+.faqs {
+    background-color: #eef2f7; /* Light background for contrast */
+}
+
+.faqs .faq-container {
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Hide overflowing answer */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px; /* Increased padding */
+    cursor: pointer;
+    background: #f9f9f9; /* Light background for question */
+    border-bottom: 1px solid #eee;
+}
+
+.faq-question h4 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.faq-question i {
+    font-size: 18px;
+    color: #f44336; /* Your primary accent color */
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg); /* Rotate icon when active */
+}
+
+.faq-answer {
+    padding: 0 25px; /* Match question padding */
+    background: #fff;
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out; /* Smooth transition for expanding */
+}
+
+.faq-answer p {
+    padding: 15px 0;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+/* Location and Hours Section */
+.location .row {
+    justify-content: center;
+    gap: 40px; /* Increased gap for location columns */
+}
+
+.location-col {
+    flex-basis: 400px; /* Width for location columns */
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px; /* Adjusted padding */
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+.location-col h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.location-col p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.location-col a {
+    color: #f44336; /* Your primary accent color for links */
+}
+
+.location-col a:hover {
+    text-decoration: underline;
+}
+
+
+.location .map {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 900px; /* Limit map width */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure map iframe respects border-radius */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.location .map iframe {
+    width: 100%;
+    height: 450px; /* Adjust height as needed */
+    display: block; /* Remove extra space below iframe */
+}
+
+
+/* Footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0; /* Increased padding */
+    background: #333; /* Dark background for footer */
+    color: #fff;
+    border-top: 1px solid #444; /* Added a subtle top border */
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 0; /* Removed top margin */
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer .contact-info {
+    margin-bottom: 30px;
+}
+
+.footer .contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ccc; /* Lighter color for contact info */
+    padding: 0;
+}
+
+.footer .contact-info i {
+    color: #f44336; /* Your primary accent color for icons */
+    margin-right: 10px;
+}
+
+.footer .contact-info a {
+    color: #ccc; /* Lighter color for contact links */
+}
+
+.footer .contact-info a:hover {
+    color: #fff; /* White on hover */
+    text-decoration: underline;
+}
+
+
+.icons .fab { /* Use fab for brand icons */
+    color: #f44336; /* Your primary accent color */
+    margin: 0 15px; /* Adjusted margin */
+    cursor: pointer;
+    padding: 10px 0; /* Adjusted padding */
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    font-size: 22px; /* Adjusted icon size */
+}
+
+.icons .fab:hover {
+    color: #fff; /* White on hover */
+    transform: scale(1.2);
+    text-shadow: 0 0 8px rgba(244, 67, 54, 0.4);
+}
+
+.footer p {
+    color: #777;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+/* Responsive Design */
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 40px; /* Adjusted font size */
+    }
+    .text-box p {
+        font-size: 16px; /* Adjusted font size */
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 15px 0;
+    }
+    .nav-links {
+        position: fixed;
+        background: #f44336; /* Your primary accent color */
+        height: 100vh;
+        width: 250px; /* Increased width for mobile menu */
+        top: 0;
+        right: -250px; /* Initially off-screen */
+        text-align: left;
+        z-index: 200; /* Higher z-index */
+        transition: 0.5s;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+        padding-top: 80px; /* Add padding to the top of the menu to clear header */
+    }
+
+    .nav-links ul {
+        padding: 0 30px; /* Adjusted padding */
+    }
+
+    .nav-links ul li a {
+        color: #fff;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        display: block; /* Make links block elements for better tapping */
+    }
+
+     .nav-links ul li a i {
+         color: #fff; /* Icon color in the mobile menu */
+         margin-right: 10px; /* Adjust icon spacing */
+     }
+
+
+    .nav-links ul li:last-child a {
+        border-bottom: none;
+    }
+
+    /* Show only the menu toggle icons on small screens */
+    nav .fa-bars,
+    nav .fa-times {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 24px; /* Increased icon size */
+        cursor: pointer;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 10%; /* Adjust horizontal padding */
+    }
+    .about-col, .books-col, .library-col,  .location-col {
+        flex-basis: 100%;
+        margin-bottom: 0;
+    }
+
+     .library-col img {
+         border-radius: 8px; /* Match column border-radius */
+         height: 200px; /* Adjust image height */
+     }
+
+     section {
+         padding: 50px 0; /* Reduced padding on smaller screens */
+     }
+
+     section h2 {
+         font-size: 26px; /* Adjusted heading size */
+     }
+
+     section p {
+         padding: 0 5%; /* Adjusted padding for section paragraphs */
+     }
+
+     .faq-question {
+         padding: 15px 20px; /* Adjust FAQ padding */
+     }
+
+     .faq-question h4 {
+         font-size: 17px; /* Adjust FAQ question font size */
+     }
+
+     .faq-answer p {
+         font-size: 14px; /* Adjust FAQ answer font size */
+     }
+
+     .location .row {
+         gap: 30px; /* Adjust gap for location columns */
+     }
+
+     .location-col {
+         flex-basis: 100%; /* Full width */
+     }
+
+     .location .map iframe {
+        height: 300px; /* Adjust map height */
+     }
+
+     .footer .contact-info p {
+         font-size: 15px; /* Adjust footer contact info font size */
+     }
+}
